@@ -4,8 +4,6 @@ const apiUrl = "https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceD
 
 const json = await d3.json(apiUrl)
 
-console.log(json)
-
 const width = 960;
 const height = 540;
 const marginTop = 20;
@@ -125,9 +123,6 @@ const tooltip = d3.select("#graph")
                   .attr("id", "tooltip")
                   .style("opacity", 0)
 
-// nome , nacionalidade
-// ano, tempo
-// porque
 svg.selectAll(".dot")
    .on("mouseover", (event, datum) => {
       tooltip
