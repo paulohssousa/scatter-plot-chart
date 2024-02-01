@@ -9,7 +9,7 @@ const height = 540;
 const marginTop = 20;
 const marginRight = 25;
 const marginBottom = 35;
-const marginLeft = 40;
+const marginLeft = 60;
 
 const parseDate = d3.timeParse("%Y")
 const parseTime = d3.timeParse("%M:%S")
@@ -60,18 +60,14 @@ svg.append("g")
    .attr("id", "y-axis")
    .call(yAxis)
 
-const rectWidth = 15
+svg.append("text")
+   .attr("x", -height/2)
+   .attr("y", 15)
+   .attr("text-anchor", "middle")
+   .attr("transform", `rotate(270)`)
+   .text("Times in Minutes")
 
-const legends = [
-   {
-      text: "Riders with doping allegations",
-      color: "#bf0d28"
-   },
-   {
-      text: "No dopping allegations",
-      color: "#d68418"
-   }
-]
+const rectWidth = 15
 
 //legend
 const legend = svg.append("g")
